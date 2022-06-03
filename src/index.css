@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: 'Roboto';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.qty {
+  padding: 10px;
+}
+
+.btn {
+  padding: .2rem .5rem;
+}
+
+.MuiButton-root {
+  padding: 2px 6px !important;
+  min-width: 30px !important;
+}
+
+.main-menu-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  box-sizing: border-box;
+  padding-right: 40px;
+}
+
+main {
+  margin-top: 80px;
+}
+
+.cart-item {
+  border-bottom: 1px solid #dedede;
+  padding: .5rem 0;
+}
+
+.product-container {
+  max-height: 50vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  min-width: 380px;
+}
