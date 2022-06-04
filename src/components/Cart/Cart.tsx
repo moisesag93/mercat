@@ -45,19 +45,23 @@ export const CartFC: React.FC<Props> = (props) => {
     if (noProducts) {
         return (
             <div>
-            <Typography color="#1976d2">Shopping Cart</Typography>
-            <div className="product-container px-4">
-                <p>No products added yet.</p>
-                {
-                    props.isCheckout &&
-                    <Link to="/">Let's continue shopping!</Link>
-                }
-                {
-                    !props.isCheckout &&
-                    <Link to="/checkout">Checkout</Link>
-                }
+                <Typography className="px-4 py-3" variant="h5" color="#1976d2">Shopping Cart</Typography>
+                <div className="product-container px-4">
+                    <Typography sx={{ mb: .5, mt: 3 }} color="text.secondary">
+                        No products added yet...
+                    </Typography>
+                    {
+                        props.isCheckout &&
+                        <Link to="/">Let's continue shopping!</Link>
+                    }
+                    {
+                        !props.isCheckout &&
+                        <Typography sx={{ mb: 2, mt: .5 }} color="text.secondary">
+                            <Link to="/checkout">Checkout</Link>
+                        </Typography>
+                    }
+                </div>
             </div>
-        </div>
         );
     }
 
@@ -80,9 +84,13 @@ export const CartFC: React.FC<Props> = (props) => {
                 <div className="col-7">
                     <h3 className="p-3">Total: {total}$</h3>
                 </div>
-                <div className="col">
-                    <Link to="/checkout">Checkout</Link>
-                </div>
+                {
+                    !props.isCheckout &&
+                    <div className="col">
+                        <Link to="/checkout">Checkout</Link>
+                    </div>
+                }
+
 
             </div>
         </div>

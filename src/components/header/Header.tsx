@@ -30,7 +30,7 @@ const Header: React.FC = () => {
     }, [dispatch]);
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light main-menu-nav px-4 justify-content-between">
+        <nav className="navbar navbar-expand-lg navbar-light main-menu-nav px-4 justify-content-between">
             <Link className="navbar-brand" to="/">
             <Typography variant="h5" component="div" color="#1976d2" fontWeight="bold">
                 MERCAT
