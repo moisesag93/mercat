@@ -6,6 +6,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { listProducts } from "../../services/Products/Products.service"
 import { addProducts } from "../../store/reducers/productSlice"
 import { CartFC } from "../Cart/Cart"
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
     const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
@@ -29,8 +30,8 @@ const Header: React.FC = () => {
     }, [dispatch]);
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light main-menu-nav mx-4 justify-content-between">
-            <a className="navbar-brand" href="/">Mercat</a>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light main-menu-nav px-4 justify-content-between">
+            <Link className="navbar-brand" to="/">Mercat</Link>
             <Button aria-describedby={id} onClick={handleClick}>
                 <ShoppingCartIcon />
             </Button>
@@ -43,7 +44,7 @@ const Header: React.FC = () => {
                     vertical: 'bottom',
                     horizontal: 'left',
                 }}>
-                <CartFC isCheckout={false}/>
+                <CartFC isCheckout={false} />
             </Popover>
 
         </nav>
