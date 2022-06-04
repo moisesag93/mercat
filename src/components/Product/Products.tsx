@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material"
 import * as React from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { IProduct } from "../../model/types"
@@ -25,7 +26,9 @@ export const Products: React.FC = () => {
     );
     return (
         <div>
-            <h1>Amiibo</h1>
+            <Typography variant="h4" component="div">
+                Amiibo
+            </Typography>
             <div className="row">
                 {products.map((product: IProduct) => (
                     <Product

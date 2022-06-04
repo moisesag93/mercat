@@ -10,7 +10,7 @@ import { Provider } from "react-redux"
 import App from "./App"
 import { store } from "./store/store"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Expenses from './routes/expenses';
+import Checkout from './routes/checkout';
 
 /* const store: Store<ProductState, ProductAction> & {
   dispatch: DispatchType
@@ -22,7 +22,7 @@ render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="expenses" element={<Expenses />} />
+        <Route path="checkout" element={<Checkout />} />
       </Routes>
     </BrowserRouter>
   </Provider>,

@@ -78,23 +78,23 @@ export const Product: React.FC<Props> = ({ product, isCart, removeProduct, addPr
       <div className="col-sm-12 col-md-4 col-lg-3 Product mb-4">
         <Card variant="outlined">
           <CardContent>
-            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+            <Typography sx={{ fontSize: 14 }} color="text.seceondary" gutterBottom>
               {product.type}
             </Typography>
-            <Typography variant="h5" component="div">
-              {product.id} {product.name}
+            <Typography variant="h5" component="div" color="#1976d2">
+              {product.id}. {product.name}
             </Typography>
             <Typography sx={{ mb: 1.5 }} color="text.secondary">
               {product.amiiboSeries}
-            </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              Price: {product.price}$
             </Typography>
             <CardMedia
               component="img"
               alt="green iguana"
               image={product.image}
             />
+            <Typography sx={{ mb: .5, mt:1.5 }} color="text.secondary">
+              <strong>Price: {product.price}$</strong>
+            </Typography>
           </CardContent>
           <CardActions>
             <Button className="w-100" size="small" variant="contained" onClick={() => addToCart(product)}>

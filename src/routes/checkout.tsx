@@ -1,7 +1,7 @@
 import { CartFC } from "../components/Cart/Cart";
 import Header from "../components/header/Header";
 
-export default function Expenses() {
+export default function Checkout() {
   return (
     <main style={{ padding: "1rem 0" }}>
       <Header />

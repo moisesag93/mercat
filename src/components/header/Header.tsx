@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useDispatch } from "react-redux"
 
-import { Button, Popover } from "@mui/material"
+import { Button, Popover, Typography } from "@mui/material"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { listProducts } from "../../services/Products/Products.service"
 import { addProducts } from "../../store/reducers/productSlice"
@@ -31,9 +31,13 @@ const Header: React.FC = () => {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light main-menu-nav px-4 justify-content-between">
-            <Link className="navbar-brand" to="/">Mercat</Link>
+            <Link className="navbar-brand" to="/">
+            <Typography variant="h5" component="div" color="#1976d2" fontWeight="bold">
+                MERCAT
+            </Typography>  
+            </Link>
             <Button aria-describedby={id} onClick={handleClick}>
-                <ShoppingCartIcon />
+                <ShoppingCartIcon htmlColor="#000"/>
             </Button>
             <Popover
                 id={id}

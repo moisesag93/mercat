@@ -33,7 +33,6 @@ export const productSlice = createSlice({
         }
         state.Products.push(newProduct);
       });
-      console.log(state.Products);
     },
     removeProduct: (state, action: PayloadAction<IProduct>) => {
       const updatedProducts: IProduct[] = state.Products.filter(
