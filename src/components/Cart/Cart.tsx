@@ -5,6 +5,7 @@ import { addToCart, removeFromCart } from "../../store/reducers/cartSlice";
 import { RootState } from "../../store/store";
 import { Product } from "../Product/Product";
 import { Link } from "react-router-dom";
+import { Typography } from "@mui/material";
 
 type Props = {
     isCheckout: boolean,
@@ -44,7 +45,7 @@ export const CartFC: React.FC<Props> = (props) => {
     if (noProducts) {
         return (
             <div>
-            <h4 className="px-4 py-2">Shopping Cart</h4>
+            <Typography color="#1976d2">Shopping Cart</Typography>
             <div className="product-container px-4">
                 <p>No products added yet.</p>
                 {
@@ -62,7 +63,7 @@ export const CartFC: React.FC<Props> = (props) => {
 
     return (
         <div>
-            <h4 className="px-4 py-2">Shopping Cart</h4>
+            <Typography className="px-4 py-3" variant="h5" color="#1976d2">Shopping Cart</Typography>
             <div className="product-container">
                 {products.map((product: IProduct) => (
                     <Product
